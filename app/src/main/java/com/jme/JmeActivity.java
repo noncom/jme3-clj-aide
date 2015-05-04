@@ -1,15 +1,15 @@
-package com.mycompany.myapp2;
+package com.jme;
 import com.jme3.app.*;
 import com.jme3.system.android.AndroidConfigChooser.ConfigType;
 import android.content.pm.*;
-import com.ncm.main.*;
 
 public class JmeActivity extends AndroidHarness
 {
     
+    int k = 9;
     
 	public JmeActivity(){
-        com.ncm.main.Game.setActivity(this);
+        com.ncm.krmt.main.Game.setActivity(this);
 		appClass = "com.ncm.main.Game";
 		eglConfigType = ConfigType.BEST;
 		

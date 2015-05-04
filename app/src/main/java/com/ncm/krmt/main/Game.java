@@ -1,12 +1,13 @@
-package com.ncm.main;
+package com.ncm.krmt.main;
 import com.jme3.app.*;
 import android.app.*;
 import android.content.*;
-import com.mycompany.myapp2.*;
 import android.os.*;
 import android.util.*;
 import clojure.lang.*;
 import clojure.java.api.*;
+import com.ncm.clojure_support.*;
+import com.jme.*;
 
 public class Game extends SimpleApplication
 {
@@ -45,8 +46,8 @@ public class Game extends SimpleApplication
         System.out.println("[[[[[[[[[[!!!]]]]]]]]]]]");
       //  clj.eval("(println (seq (.getURLs (java.lang.ClassLoader/getSystemClassLoader))))");     
    
-        clj.rt.var("clojure.core", "require").invoke(Clojure.read("clj.core"));
-        clj.rt.var("clj.core", "hello").invoke();
+        clj.getRT().var("clojure.core", "require").invoke(Clojure.read("clj.core"));
+        clj.getRT().var("clj.core", "hello").invoke();
     }
     
 	@Override

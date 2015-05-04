@@ -1,4 +1,4 @@
-package com.ncm.main;
+package com.ncm.clojure_support;
 
 import clojure.lang.*;
 import java.io.StringReader;
@@ -24,6 +24,10 @@ public class ClojureF
 	String fake = "/mnt/sdcard/_Storage/programming/clojure/fake.clj";
 	String nsf = "NO_SOURCE_FILE";
 	
+    public RT getRT(){
+        return rt;
+    }
+    
 	public Object eval(String s){
 		RT.var("clojure.core", "*compile-path*").alterRoot(new FakeFn(), new FakeSeq());
 		Object res = clojure.lang.Compiler.load(new StringReader(s), fake, nsf);
