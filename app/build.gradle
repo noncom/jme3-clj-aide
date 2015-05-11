@@ -5,7 +5,7 @@ android {
     buildToolsVersion "21.1.0"
 
     defaultConfig {
-        applicationId "com.mycompany.myapp2"
+        applicationId "com.jme"
         minSdkVersion 14
         targetSdkVersion 21
         versionCode 1
@@ -20,8 +20,10 @@ android {
 }
 
 dependencies {
-    compile fileTree(dir: 'src/clj', include ['*.clj'])
-    compile fileTree(dir: 'libs', include: ['*.jar'])
+    
+    
+//    compile fileTree(dir: 'src/main/clj', include ['*.clj'])
+//    compile fileTree(dir: 'libs', include: ['*.jar'])
 	compile 'com.jme3:jme3-core:3.0.10'
 	compile 'com.jme3:jme3-android:3.0.10'
     compile 'com.jme3:jme3-plugins:3.0.10'

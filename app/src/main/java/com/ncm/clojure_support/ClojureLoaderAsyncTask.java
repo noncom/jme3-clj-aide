@@ -5,7 +5,7 @@ import java.io.*;
 public class ClojureLoaderAsyncTask extends AsyncTask<String, String, String> {
 
 	ClojureF clojure;
-	String defaultPath = "/mnt/sdcard/AppProjects/MyApp2/app/src/main";
+	String defaultPath = "/mnt/sdcard/AppProjects/spaces/app/src/main/java/clj";
 //	System.setProperty("clojure.compile.path", path + "clj/");
 
 
@@ -28,6 +28,8 @@ public class ClojureLoaderAsyncTask extends AsyncTask<String, String, String> {
 			System.setProperty("user.dir", defaultPath);
             try {
                 fis = new FileInputStream(new File(defaultPath + "/" + location));
+                log("==================== dir = " + System.getProperty("user.dir"));
+                log("===== fis = " + fis);
                 StringBuilder sb = new StringBuilder();
                 while (fis.available() > 0) {
                     sb.append((char)fis.read());

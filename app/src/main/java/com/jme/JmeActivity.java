@@ -8,8 +8,8 @@ public class JmeActivity extends AndroidHarness {
     int k = 9;
 
 	public JmeActivity() {
-        com.ncm.krmt.main.Game.setActivity(this);
-		appClass = "com.ncm.main.Game";
+        com.ncm.spaces.main.Game.setActivity(this);
+		appClass = "com.ncm.spaces.main.Game";
 		eglConfigType = ConfigType.BEST;
 
 		exitDialogTitle = "Quit?";

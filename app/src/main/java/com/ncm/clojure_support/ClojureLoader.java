@@ -24,11 +24,11 @@ public class ClojureLoader implements Runnable {
 				}
 			});
 
-		clojure = new ClojureF();
+		//clojure = new ClojureF();
 
 		clat = new ClojureLoaderAsyncTask(clojure);
 		Log.d("999999", "_-----------getting ready to load clojure core clj ------");
-		clat.executeOnExecutor(executor, "clj/core.clj");
+		clat.executeOnExecutor(executor, "core.clj");
 	}
 
 	public AsyncTask.Status getStatus() {
